@@ -1,7 +1,7 @@
 #app {
   display: flex;
   flex-direction: row;
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
 
   position: absolute;  /* 画面全体に広がるようにする */
   width: 100%;
@@ -9,7 +9,7 @@
 }
 
 #memoList {
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   
   width: 16%;
   min-width: 200px;
@@ -18,22 +18,18 @@
 #rightDiv {
   display: flex;
   flex-direction: column;
-  background-color: darkcyan;
+  /* background-color: darkcyan; */
   width: 84%;
   height: 100%;
   position: relative; 
 }
 
 #textForm {
-  background-color: dimgray;
+  /* background-color: dimgray; */
   flex-grow: 1;
 }
 
 #memoOption {
-  background-color: darkslateblue;
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
-  min-height: 64px;
+  height: 64px;
 }

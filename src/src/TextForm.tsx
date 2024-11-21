@@ -1,4 +1,5 @@
 import React from 'react'
+import './TextForm.css'
 
 import {MemoData, MemoItem, MemoValue} from "./type"
 
@@ -29,14 +30,14 @@ const TextForm = ({memoValue, updateFunc}:props) => {
 
     if (memoValue !== undefined ){
         return (
-            <>
-            <div>
-                <input type="text" value={memoValue.title} onChange={(e) => onChangeController({"title": e.target.value})}></input>
+            <div id="screen">
+                <div id="title">
+                    <input id="input" type="text" value={memoValue.title} onChange={(e) => onChangeController({"title": e.target.value})}></input>
+                </div>
+                <div id="text">
+                    <textarea id="textarea" value={memoValue.text} onChange={(e) => onChangeController({"text": e.target.value})}/> 
+                </div>
             </div>
-            <div>
-                <textarea value={memoValue.text} onChange={(e) => onChangeController({"text": e.target.value})}/> 
-            </div>
-            </>
             
         )
     } else {
