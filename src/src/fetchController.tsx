@@ -9,7 +9,7 @@ export const getMemoList = async (): Promise<MemoItem[]> => {
         const memoList = await response.json();
         return memoList;
     } catch (error) {
-        console.error("Fetch error! getMemoList メモリストの取得に失敗 空の配列を返します", error);
+        console.error("Fetch error! getMemoList メモリストの取得に失敗 空の配列を返します" + apiUrl + "dayo ", error);
         return []; // エラー時に空の配列を返す
     }
 }
