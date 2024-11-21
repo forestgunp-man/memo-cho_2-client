@@ -1,42 +1,39 @@
-.App {
-  text-align: center;
+#app {
+  display: flex;
+  flex-direction: row;
+  background-color: antiquewhite;
+
+  position: absolute;  /* 画面全体に広がるようにする */
+  width: 100%;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#memoList {
+  background-color: aquamarine;
+  
+  width: 16%;
+  min-width: 200px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#rightDiv {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: darkcyan;
+  width: 84%;
+  height: 100%;
+  position: relative; 
 }
 
-.App-link {
-  color: #61dafb;
+#textForm {
+  background-color: dimgray;
+  flex-grow: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.RestComp {
-  size: 50px;
+#memoOption {
+  background-color: darkslateblue;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 64px;
 }

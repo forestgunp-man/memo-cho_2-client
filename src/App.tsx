@@ -183,26 +183,25 @@ function App() {
 
   return (
     <>
+      <div id="app">
 
+        <div id="memoList">
+          <RecordMemoButton onClickEvent={newRecordMemo} recordMemo={newMemoInitialValue}/>
+          <MemoList memoList={memoList} onClickEvent={selectMemo}/>
+        </div>
 
-      <p>hello memo</p>
-      <div></div>
-      {/* <div>
-        <NewMemoButton onClickEvent={displayMemo}/>
-      </div> */}
-      <div>
-        <RecordMemoButton onClickEvent={newRecordMemo} recordMemo={newMemoInitialValue}/>
-        <MemoList memoList={memoList} onClickEvent={selectMemo}/>
-      </div>
-      <div>
-        <TextForm memoValue={createMemoValue(memoData)} updateFunc={inputMemoUpdate}/>
-      </div>
-      <div>
-        <SaveMemoButton onClickEvent={recordMemoUpdate}/>
-        <DeleteRecordMemoButton onClickEvent={deleteMemo}/>
-      </div>
+        <div id="rightDiv">
+          <div id="textForm">
+            <TextForm memoValue={createMemoValue(memoData)} updateFunc={inputMemoUpdate}/>
+          </div>
+
+          <div id="memoOption">
+            <SaveMemoButton onClickEvent={recordMemoUpdate}/>
+            <DeleteRecordMemoButton onClickEvent={deleteMemo}/>
+          </div>
+        </div>
       
-
+      </div>
     </>
   );
 
