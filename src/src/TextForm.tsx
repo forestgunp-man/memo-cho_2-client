@@ -42,7 +42,16 @@ const TextForm = ({memoValue, updateFunc}:props) => {
         )
     } else {
         console.log("memo is not selected");
-        return(null)
+        return(
+            <div id="screen">
+                <div id="title">
+                    <input id="input" value={""} disabled type="text"></input>
+                </div>
+                <div id="text">
+                    <textarea id="textarea" disabled value={""}/> 
+                </div>
+            </div>
+        )
     }
     
 }
