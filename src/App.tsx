@@ -152,9 +152,19 @@ function App() {
           </div>
 
           <div id="memoOption">
-            <FontSizer fontSizeValue={fontSizeValue} setFontSizeValue={setFontSizeValue}/>
-            <SaveMemoButton onClickEvent={recordMemoUpdate}/>
-            <DeleteRecordMemoButton onClickEvent={deleteMemo}/>
+            <div>
+              <FontSizer fontSizeValue={fontSizeValue} setFontSizeValue={setFontSizeValue}/>
+            </div>
+            <div id="saveAndDelete">
+              <div id="saveButton">
+                <SaveMemoButton onClickEvent={recordMemoUpdate}/>
+              </div>
+              <div id="deleteButton">
+                <DeleteRecordMemoButton onClickEvent={deleteMemo}/>
+              </div>
+              
+            </div>
+            
           </div>
         </div>
       

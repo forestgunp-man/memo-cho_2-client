@@ -35,3 +35,24 @@
   display: flex;
   flex-direction: row;
 }
+
+#saveAndDelete {
+  margin-left: auto;
+  display: flex;
+  flex-wrap: row;
+  width: 256px;
+  height: 100%;
+  background-color: black;
+}
+
+#saveButton {
+  width: 50%;
+  height: 100%;
+  background-color: green;
+}
+
+#deleteButton {
+  width: 50%;
+  height: 100%;
+  background-color: red;
+}
