@@ -3,6 +3,8 @@
 //メモ単体の型
 export type MemoData = {id:number, title:string,text:string};
 
+export type Pixel = `${number}px`;
+
 export type MemoItem = Pick<MemoData, "id" | "title">;
 export type MemoValue = Pick<MemoData, "title" | "text">;
 

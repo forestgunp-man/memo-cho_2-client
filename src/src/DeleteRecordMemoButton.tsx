@@ -1,5 +1,6 @@
 import React from 'react'
 import {MemoData} from "./type"
+import './SaveAndDeleteButton.css'
 
 interface props {
   onClickEvent: () => void
@@ -7,9 +8,7 @@ interface props {
 
 const DeleteRecordMemoButton = ({onClickEvent}:props) => {
   return (
-    <div>
-      <button onClick={onClickEvent}>メモ削除</button>
-    </div>
+      <button id="delete" onClick={onClickEvent}>メモ削除</button>
   )
 }
 
