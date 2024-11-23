@@ -1,16 +1,18 @@
 import React from 'react'
 import './TextForm.css'
 
-import {MemoData, MemoItem, MemoValue} from "./type"
+import {MemoData, MemoItem, MemoValue, Pixel} from "./type"
 
 
 interface props{
     memoValue: MemoValue | undefined;
+    fontSizeValue: number;
     updateFunc: (inputMemoValue: MemoValue) => void;
 }
 
-const TextForm = ({memoValue, updateFunc}:props) => {
+const TextForm = ({memoValue, fontSizeValue, updateFunc}:props) => {
     //console.log("TextForm_memoValue! ...", memoValue)
+    const fontSize: Pixel = `${fontSizeValue}px`;
 
     //データをまとめるやつ。更新イベントに渡す。
     const onChangeController = (data:{"title": string} | {"text": string}): void => {
@@ -35,7 +37,7 @@ const TextForm = ({memoValue, updateFunc}:props) => {
                     <input id="input" type="text" value={memoValue.title} onChange={(e) => onChangeController({"title": e.target.value})}></input>
                 </div>
                 <div id="text">
-                    <textarea id="textarea" value={memoValue.text} onChange={(e) => onChangeController({"text": e.target.value})}/> 
+                    <textarea id="textarea" style={{fontSize}} value={memoValue.text} onChange={(e) => onChangeController({"text": e.target.value})}/> 
                 </div>
             </div>
             

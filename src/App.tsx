@@ -7,11 +7,12 @@ import MemoList from "./src/MemoList";
 import NewMemoButton from "./src/NewMemoButton";
 import RecordMemoButton from "./src/RecordMemoButton"
 import SaveMemoButton from "./src/SaveMemoButton"
+import FontSizer from "./src/FontSizer";
 
 import * as fetchController from "./src/fetchController";
 
 //型
-import {createMemoValue, MemoData, MemoItem, MemoValue} from "./src/type"
+import {createMemoValue, MemoData, MemoItem, MemoValue, Pixel} from "./src/type"
 import TextForm from "./src/TextForm";
 import DeleteRecordMemoButton from "./src/DeleteRecordMemoButton";
 
@@ -20,51 +21,6 @@ import DeleteRecordMemoButton from "./src/DeleteRecordMemoButton";
 
 
 const resData: string = "b";
-
-
-//testfetchGET
-// fetch("http://localhost:3001")
-// .then(data => data.text())
-// .then(dataText => console.log("とってきたテキスト : " + dataText))
-// .catch(error => console.error("Fetch エラー:", error));
-
-//testfetchPOST
-// fetch("http://localhost:3001",{
-//   method: "POST",
-//   headers: {
-//     'Content-Type': 'application/json'
-//   },
-//   body: JSON.stringify({"name":"bob", "age":27})
-// })
-// .catch(error => {
-//   console.error('なにもかえってこないが？？ -> ', error);
-// });
-
-
-
-//----------------test----------------
-
-//test
-// fetchController.getMemoList().then(memoList => {
-//   console.log("fc_test... ",memoList)
-// })
-
-
-
-
-
-//----------------init----------------
-
-
-
-
-
-
-
-
-
-
-
 
 
 // const kariMemoData: memoData[] = [
@@ -117,7 +73,6 @@ function App() {
     }
     
   }
-  //{title: "testMemoTitle", text: "testMemoText"} 引数メモ
 
   //メモを選択した際のイベント
   const selectMemo = async (id:number): Promise<void> => {
@@ -156,6 +111,7 @@ function App() {
 
   const [memoList, setMemoList] = useState<MemoItem[]>([]);
   const [memoData, setMemoData] = useState<MemoData|undefined>(undefined);
+  const [fontSizeValue, setFontSizeValue] = useState<number>(24);
   
 
 
@@ -192,10 +148,11 @@ function App() {
 
         <div id="rightDiv">
           <div id="textForm">
-            <TextForm memoValue={createMemoValue(memoData)} updateFunc={inputMemoUpdate}/>
+            <TextForm memoValue={createMemoValue(memoData)} fontSizeValue={fontSizeValue} updateFunc={inputMemoUpdate}/>
           </div>
 
           <div id="memoOption">
+            <FontSizer fontSizeValue={fontSizeValue} setFontSizeValue={setFontSizeValue}/>
             <SaveMemoButton onClickEvent={recordMemoUpdate}/>
             <DeleteRecordMemoButton onClickEvent={deleteMemo}/>
           </div>

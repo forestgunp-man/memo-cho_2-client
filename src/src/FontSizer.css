@@ -1,0 +1,7 @@
+#div {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    flex: 1;
+    background-color: aquamarine;
+}

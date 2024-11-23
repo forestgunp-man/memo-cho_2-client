@@ -32,4 +32,6 @@
 #memoOption {
   width: 100%;
   height: 64px;
+  display: flex;
+  flex-direction: row;
 }
