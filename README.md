@@ -1,3 +1,6 @@
+# プロジェクト概要
+初めて使用するReact,typescript,express,SQLiteの勉強用、バックエンドを伴うアプリケーションを試作するフロントエンド側のリポジトリ。
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
